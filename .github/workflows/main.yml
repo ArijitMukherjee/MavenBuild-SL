@@ -29,7 +29,7 @@ jobs:
 
       - name: Connect to Lab machine and trigger Jenkins job
         run: |
-          sshpass -p '${{ secrets.SSH_PASS }}' ssh -o StrictHostKeyChecking=no labuser@15.206.1.117 << 'EOF'
+          sshpass -p '${{ secrets.SSH_PASS }}' ssh -o StrictHostKeyChecking=no labuser@13.233.93.7 << 'EOF'
             curl -u ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_PASS }} \
             http://localhost:8080/job/deployment-pipeline/build?token=token1
           EOF
